@@ -16,12 +16,12 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-50 bg-pink-200/95 backdrop-blur-sm border-b border-pink-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl font-bold text-foreground tracking-tight">
-              Planja<span className="text-terracotta">España</span>
+              Planja<span className="text-pink-700">España</span>
             </span>
           </Link>
 
@@ -31,14 +31,14 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium text-muted hover:text-foreground transition-colors rounded-lg hover:bg-surface"
+                className="px-3 py-2 text-sm font-medium text-pink-800 hover:text-pink-950 transition-colors rounded-lg hover:bg-pink-300/60"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href="/start-hier"
-              className="ml-3 px-4 py-2 text-sm font-semibold text-white bg-terracotta rounded-lg hover:bg-terracotta-dark transition-colors"
+              className="ml-3 px-4 py-2 text-sm font-semibold text-white bg-pink-600 rounded-lg hover:bg-pink-700 transition-colors"
             >
               Start hier
             </Link>
@@ -47,7 +47,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 text-muted hover:text-foreground"
+            className="md:hidden p-2 text-pink-800 hover:text-pink-950"
             aria-label="Menu"
           >
             {menuOpen ? (
@@ -65,7 +65,7 @@ export default function Header() {
 
       {/* Mobile nav */}
       {menuOpen && (
-        <nav className="md:hidden border-t border-border bg-background">
+        <nav className="md:hidden border-t border-pink-300 bg-pink-100">
           <div className="px-4 py-3 space-y-1">
             {navItems.map((item) => (
               <Link
@@ -80,7 +80,7 @@ export default function Header() {
             <Link
               href="/start-hier"
               onClick={() => setMenuOpen(false)}
-              className="block mt-2 px-4 py-2.5 text-center text-base font-semibold text-white bg-terracotta rounded-lg hover:bg-terracotta-dark transition-colors"
+              className="block mt-2 px-4 py-2.5 text-center text-base font-semibold text-white bg-pink-600 rounded-lg hover:bg-pink-700 transition-colors"
             >
               Start hier
             </Link>
